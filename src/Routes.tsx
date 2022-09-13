@@ -6,9 +6,12 @@ import Home from './pages/Home';
 
 function Routes() {
 	return (
-		<Switch>
-			<Route path='/' element={<Home />} />
-		</Switch>
+		<>
+			<Header />
+			<Switch>
+				<Route path='/' element={<Home />} />
+			</Switch>
+		</>
 	);
 }
 
