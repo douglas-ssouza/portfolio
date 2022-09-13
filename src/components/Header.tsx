@@ -2,7 +2,7 @@ import React from 'react';
 
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
 
 import headerIcon from '../assets/icon_180.png';
 
@@ -11,15 +11,9 @@ function Header() {
 		<>
 			<AppBar color='secondary'>
 				<Toolbar>
-					<Grid container>
-						<Grid item>
-							<img
-								src={headerIcon}
-								alt='Header icon with initials DS'
-								style={{padding: '.5em', width: '80px'}}
-							/>
-						</Grid>
-					</Grid>
+					<Button>
+						<img src={headerIcon} alt='Icon with initials "DS"' width='50em' />
+					</Button>
 				</Toolbar>
 			</AppBar>
 			<Toolbar />

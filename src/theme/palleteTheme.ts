@@ -13,6 +13,10 @@ const paletteTheme = createTheme({
 		terciary: {main: surfaceGrey},
 		fontWhite,
 		fontGrey,
+		background: {
+			paper: surfaceGrey,
+			default: surfaceBlack,
+		},
 	},
 });
 
