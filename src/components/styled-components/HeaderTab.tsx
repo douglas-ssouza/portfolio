@@ -13,7 +13,7 @@ type HeaderTabProps = TabProps & {
 const HeaderTab = styled(Tab)<HeaderTabProps>(({theme}) => ({
 	color: theme.palette.text.primary,
 	minWidth: '10em',
-	marginRight: '2em',
+	marginRight: '0.5em',
 	'&:hover': {
 		color: theme.palette.primary.main,
 		opacity: 1,
