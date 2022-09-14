@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -14,15 +15,15 @@ function Header() {
 		<>
 			<AppBar color='secondary'>
 				<Toolbar>
-					<Button>
+					<Button disableRipple>
 						<img src={headerIcon} alt='Icon with initials "DS"' width='50em' />
 					</Button>
 					<Tabs sx={{ml: 'auto'}}>
-						<HeaderTab disableRipple label='Home' />
-						<HeaderTab disableRipple label='Sobre mim' />
-						<HeaderTab disableRipple label='Projetos' />
-						<HeaderTab disableRipple label='Contato' />
-						<HeaderTab disableRipple label='Habilidades' />
+						<HeaderTab component={Link} to='/' disableRipple label='Home' />
+						<HeaderTab component={Link} to='/about' disableRipple label='Sobre mim' />
+						<HeaderTab component={Link} to='/projects' disableRipple label='Projetos' />
+						<HeaderTab component={Link} to='/contat' disableRipple label='Contato' />
+						<HeaderTab component={Link} to='/skills' disableRipple label='Habilidades' />
 					</Tabs>
 				</Toolbar>
 			</AppBar>
