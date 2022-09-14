@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 
 import AppBar from '@mui/material/AppBar';
@@ -11,6 +11,40 @@ import HeaderTab from './styled-components/HeaderTab';
 import headerIcon from '../assets/icon_180.png';
 
 function Header() {
+	const [value, setValue] = useState(0);
+
+	const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+		setValue(newValue);
+	};
+
+	useEffect(() => {
+		const handleTabChange = () => {
+			const {pathname} = window.location;
+
+			switch (pathname) {
+				case '/':
+					setValue(0);
+					break;
+				case '/about':
+					setValue(1);
+					break;
+				case '/projects':
+					setValue(2);
+					break;
+				case '/skills':
+					setValue(3);
+					break;
+				case '/contact':
+					setValue(4);
+					break;
+				default:
+					break;
+			}
+		};
+
+		handleTabChange();
+	}, [value]);
+
 	return (
 		<>
 			<AppBar color='secondary'>
@@ -19,39 +53,52 @@ function Header() {
 						disableRipple
 						component={Link}
 						to='/'
+						onClick={() => {
+							setValue(0);
+						}}
 					>
 						<img src={headerIcon} alt='Icon with initials "DS"' width='50em' />
 					</Button>
-					<Tabs sx={{ml: 'auto'}}>
+					<Tabs
+						sx={{ml: 'auto'}}
+						value={value}
+						onChange={handleChange}
+						TabIndicatorProps={{style: {display: 'none'}}}
+					>
 						<HeaderTab
 							component={Link}
 							to='/'
 							disableRipple
 							label='Home'
+							selected={value === 0}
 						/>
 						<HeaderTab
 							component={Link}
 							to='/about'
 							disableRipple
 							label='Sobre mim'
+							selected={value === 1}
 						/>
 						<HeaderTab
 							component={Link}
 							to='/projects'
 							disableRipple
 							label='Projetos'
+							selected={value === 2}
 						/>
 						<HeaderTab
 							component={Link}
 							to='/skills'
 							disableRipple
 							label='Habilidades'
+							selected={value === 3}
 						/>
 						<HeaderTab
 							component={Link}
 							to='/contact'
 							disableRipple
 							label='Contato'
+							selected={value === 4}
 						/>
 					</Tabs>
 				</Toolbar>
