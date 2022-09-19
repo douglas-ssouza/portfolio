@@ -2,15 +2,13 @@ import React from 'react';
 
 import Grid from '@mui/material/Grid';
 
-import ProfilePicture from '../components/styled-components/ProfilePicture';
-
-import picture from '../assets/picture.jpg';
+import GreetingBlock from './GreetingBlock';
 
 function Home() {
 	return (
-		<Grid container>
+		<Grid container direction='column'>
 			<Grid item>
-				<ProfilePicture src={picture} alt='Picture of Douglas Souza' />
+				<GreetingBlock />
 			</Grid>
 		</Grid>
 	);
