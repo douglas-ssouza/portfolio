@@ -6,9 +6,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
-import ProfilePicture from '../components/styled-components/ProfilePicture';
-
-import picture from '../assets/picture.jpg';
+import developer from '../assets/developer.svg';
 
 function GreetingBlock() {
 	const theme = useTheme();
@@ -16,9 +14,9 @@ function GreetingBlock() {
 	return (
 		<Grid
 			container
-			justifyContent='space-evenly'
+			justifyContent='space-around'
 			alignItems='center'
-			sx={{height: '30em', backgroundColor: theme.palette.background.paper}}
+			sx={{height: '40em', backgroundColor: theme.palette.background.paper}}
 		>
 			<Grid item>
 				<Typography component='h3' variant='h4'>
@@ -40,8 +38,12 @@ function GreetingBlock() {
 					Linkedin
 				</Button>
 			</Grid>
-			<Grid item>
-				<ProfilePicture src={picture} alt='Picture of Douglas Souza' />
+			<Grid item textAlign='center'>
+				<img
+					src={developer}
+					alt='Illustration of a person sitting in front of a computer'
+					width='400em'
+				/>
 			</Grid>
 		</Grid>
 	);
