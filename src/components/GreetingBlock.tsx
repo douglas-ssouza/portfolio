@@ -18,15 +18,22 @@ function GreetingBlock() {
 			alignItems='center'
 			sx={{height: '40em', backgroundColor: theme.palette.background.paper}}
 		>
+			<Grid item textAlign='center'>
+				<img
+					src={developer}
+					alt='Illustration of a person sitting in front of a computer'
+					width='400em'
+				/>
+			</Grid>
 			<Grid item>
 				<Typography component='h3' variant='h4'>
 						Oi, Eu sou o
 				</Typography>
 				<Typography component='h1' variant='h1'>
-					Douglas Souza
+					Douglas
 				</Typography>
 				<Typography component='h2' variant='h4'>
-					Desenvolvedor Front-end
+					Desenvolvedor de Software
 				</Typography>
 				<Button
 					variant='contained'
@@ -37,13 +44,6 @@ function GreetingBlock() {
 				>
 					Linkedin
 				</Button>
-			</Grid>
-			<Grid item textAlign='center'>
-				<img
-					src={developer}
-					alt='Illustration of a person sitting in front of a computer'
-					width='400em'
-				/>
 			</Grid>
 		</Grid>
 	);
