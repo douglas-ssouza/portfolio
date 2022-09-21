@@ -1,13 +1,17 @@
 import React from 'react';
 
+import {useTheme} from '@mui/material/styles';
+
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import Carousel from 'react-material-ui-carousel';
 
 function ProjectsBlock() {
+	const theme = useTheme();
+
 	return (
-		<Grid container direction='column'>
+		<Grid container direction='column' sx={{backgroundColor: theme.palette.secondary.light}}>
 			<Grid item>
 				<Typography component='h2' variant='h3'>
 					Projetos

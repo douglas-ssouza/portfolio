@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
-import developer from '../assets/developer.svg';
+import developer from '../assets/illustrations/developer.svg';
 
 function GreetingBlock() {
 	const theme = useTheme();

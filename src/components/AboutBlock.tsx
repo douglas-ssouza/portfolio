@@ -3,7 +3,7 @@ import React from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
-import personal from '../assets/personal.svg';
+import personal from '../assets/illustrations/personal.svg';
 
 function AboutBlock() {
 	return (

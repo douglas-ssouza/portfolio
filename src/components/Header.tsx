@@ -8,7 +8,7 @@ import Tabs from '@mui/material/Tabs';
 
 import HeaderTab from './styled-components/HeaderTab';
 
-import headerIcon from '../assets/icon_180.png';
+import headerIcon from '../assets/logos/icon_180.png';
 
 function Header() {
 	const [value, setValue] = useState(0);
