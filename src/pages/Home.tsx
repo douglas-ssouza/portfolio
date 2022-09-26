@@ -5,6 +5,7 @@ import Grid from '@mui/material/Grid';
 import GreetingBlock from '../components/GreetingBlock';
 import AboutBlock from '../components/AboutBlock';
 import ProjectsBlock from '../components/ProjectsBlock';
+import SkillsBlock from '../components/SkillsBlock';
 
 function Home() {
 	return (
@@ -17,6 +18,9 @@ function Home() {
 			</Grid>
 			<Grid item>
 				<ProjectsBlock />
+			</Grid>
+			<Grid item>
+				<SkillsBlock />
 			</Grid>
 		</Grid>
 	);
