@@ -25,7 +25,7 @@ function ProjectsBlock() {
 			}}
 		>
 			<Grid item>
-				<Typography component='h2' variant='h3'>
+				<Typography component='h2' variant='h3' align='center'>
 					Projetos
 				</Typography>
 			</Grid>
