@@ -14,9 +14,9 @@ function GreetingBlock() {
 	return (
 		<Grid
 			container
-			justifyContent='space-around'
+			justifyContent='space-evenly'
 			alignItems='center'
-			sx={{height: '85vh', backgroundColor: theme.palette.primary.main}}
+			sx={{height: '40em', backgroundColor: theme.palette.primary.main}}
 		>
 			<Grid item textAlign='center'>
 				<img
