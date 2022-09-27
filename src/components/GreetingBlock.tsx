@@ -4,7 +4,8 @@ import {useTheme} from '@mui/material/styles';
 
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+
+import CustomButton from './styled-components/CustomButton';
 
 import developer from '../assets/illustrations/developer.svg';
 
@@ -26,7 +27,7 @@ function GreetingBlock() {
 				/>
 			</Grid>
 			<Grid item>
-				<Typography component='h3' variant='h4'>
+				<Typography component='h4' variant='h4'>
 						Oi, Eu sou o
 				</Typography>
 				<Typography component='h1' variant='h1'>
@@ -35,15 +36,15 @@ function GreetingBlock() {
 				<Typography component='h2' variant='h4'>
 					Desenvolvedor de Software
 				</Typography>
-				<Button
+				<CustomButton
 					variant='contained'
-					color='primary'
 					component='a'
 					href='https://www.linkedin.com/in/douglasssouza'
 					target='_blank'
+					sx={{mt: '2em'}}
 				>
 					Linkedin
-				</Button>
+				</CustomButton>
 			</Grid>
 		</Grid>
 	);
