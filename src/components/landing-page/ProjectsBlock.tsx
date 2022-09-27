@@ -9,7 +9,7 @@ import Carousel from 'react-material-ui-carousel';
 
 import ProjectPreview from './ProjectPreview';
 
-import trybetunes from '../assets/projects/trybetunes.png';
+import trybetunes from '../../assets/projects/trybetunes.png';
 
 function ProjectsBlock() {
 	const theme = useTheme();

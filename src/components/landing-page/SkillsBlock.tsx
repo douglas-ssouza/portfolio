@@ -3,17 +3,17 @@ import React from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
-import thinking from '../assets/illustrations/thinking.svg';
-import css3 from '../assets/techs/css3.png';
-import html5 from '../assets/techs/html5.png';
-import javascript from '../assets/techs/javascript.png';
-import jest from '../assets/techs/jest.png';
-import mongodb from '../assets/techs/mongodb.png';
-import mysql from '../assets/techs/mysql.png';
-import nodejs from '../assets/techs/nodejs.png';
-import redux from '../assets/techs/redux.png';
-import typescript from '../assets/techs/typescript.png';
-import react from '../assets/techs/react.png';
+import thinking from '../../assets/illustrations/thinking.svg';
+import css3 from '../../assets/techs/css3.png';
+import html5 from '../../assets/techs/html5.png';
+import javascript from '../../assets/techs/javascript.png';
+import jest from '../../assets/techs/jest.png';
+import mongodb from '../../assets/techs/mongodb.png';
+import mysql from '../../assets/techs/mysql.png';
+import nodejs from '../../assets/techs/nodejs.png';
+import redux from '../../assets/techs/redux.png';
+import typescript from '../../assets/techs/typescript.png';
+import react from '../../assets/techs/react.png';
 
 function SkillsBlock() {
 	const techs = [

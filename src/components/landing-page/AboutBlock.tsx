@@ -5,7 +5,7 @@ import {useTheme} from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
-import code_review from '../assets/illustrations/code_review.svg';
+import code_review from '../../assets/illustrations/code_review.svg';
 
 function AboutBlock() {
 	const theme = useTheme();

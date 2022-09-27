@@ -5,9 +5,9 @@ import {useTheme} from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
-import CustomButton from './styled-components/CustomButton';
+import CustomButton from '../styled-components/CustomButton';
 
-import developer from '../assets/illustrations/developer.svg';
+import developer from '../../assets/illustrations/developer.svg';
 
 function GreetingBlock() {
 	const theme = useTheme();
