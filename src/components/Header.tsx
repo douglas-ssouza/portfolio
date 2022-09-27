@@ -8,7 +8,7 @@ import Tabs from '@mui/material/Tabs';
 
 import HeaderTab from './styled-components/HeaderTab';
 
-import headerIcon from '../assets/logos/icon_180.png';
+import headerIcon from '../assets/logos/icon_192.png';
 
 function Header() {
 	const [value, setValue] = useState(0);
@@ -47,7 +47,7 @@ function Header() {
 
 	return (
 		<>
-			<AppBar color='secondary'>
+			<AppBar>
 				<Toolbar>
 					<Button
 						disableRipple

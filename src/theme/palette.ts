@@ -1,23 +1,12 @@
-const surfaceOrange = '#FF5E1E';
-const surfaceBrown = '#201F1B';
-const surfaceGrey = '#3F3C37';
-const textGrey = '#CCC6BA';
-const textWhite = '#FFFFFF';
+const blue = '#2F2FA2';
+const pink = '#F64C72';
 
 const palette = {
 	primary: {
-		main: surfaceOrange,
+		main: blue,
 	},
 	secondary: {
-		main: surfaceBrown,
-	},
-	text: {
-		primary: textWhite,
-		secondary: textGrey,
-	},
-	background: {
-		paper: surfaceGrey,
-		default: surfaceBrown,
+		main: pink,
 	},
 };
 

@@ -16,7 +16,7 @@ function GreetingBlock() {
 			container
 			justifyContent='space-around'
 			alignItems='center'
-			sx={{height: '85vh', backgroundColor: theme.palette.secondary.light}}
+			sx={{height: '85vh', backgroundColor: theme.palette.primary.main}}
 		>
 			<Grid item textAlign='center'>
 				<img

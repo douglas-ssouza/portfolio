@@ -19,9 +19,9 @@ function ProjectsBlock() {
 			container
 			direction='column'
 			sx={{
-				backgroundColor: theme.palette.secondary.light,
 				padding: '2em',
 				height: '40em',
+				backgroundColor: theme.palette.primary.main,
 			}}
 		>
 			<Grid item>

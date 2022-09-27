@@ -11,15 +11,16 @@ type HeaderTabProps = TabProps & {
 };
 
 const HeaderTab = styled(Tab)<HeaderTabProps>(({theme}) => ({
-	color: theme.palette.text.primary,
 	minWidth: '10em',
 	marginRight: '0.5em',
+	color: 'white',
+	opacity: 0.7,
 	'&:hover': {
-		color: theme.palette.primary.main,
 		opacity: 1,
 	},
-	'& .Mui-selected': {
-		color: theme.palette.primary.main,
+	'&.Mui-selected': {
+		color: 'white',
+		opacity: 1,
 	},
 }));
 

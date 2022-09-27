@@ -1,20 +1,24 @@
 import React from 'react';
 
+import {useTheme} from '@mui/material/styles';
+
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import personal from '../assets/illustrations/personal.svg';
 
 function AboutBlock() {
+	const theme = useTheme();
+
 	return (
-		<Grid container direction='column'>
+		<Grid container direction='column' sx={{backgroundColor: theme.palette.grey[600]}}>
 			<Grid item sx={{my: 3}}>
 				<Typography component='h2' variant='h3' align='center'>
 					Sobre mim
 				</Typography>
 			</Grid>
-			<Grid item container sx={{p: 3}} spacing={4}>
-				<Grid item xs={12} md={6}>
+			<Grid item container sx={{p: 3}} justifyContent='space-around'>
+				<Grid item sx={{width: '40%'}}>
 					<Typography component='p' variant='body1' sx={{lineHeight: '2em'}}>
 						Me chamo Douglas Souza. Moro em Santa Isabel - SP.
 						<br />
@@ -28,11 +32,11 @@ function AboutBlock() {
 						Hoje atuo como desenvolvedor front-end utilizando tecnologias como ReactJS, TypeScript e Material UI.
 					</Typography>
 				</Grid>
-				<Grid item xs={12} md={6}>
+				<Grid item sx={{width: '40%'}} >
 					<img
 						src={personal}
 						alt='illustration of person with boxes of information'
-						height='400em'
+						width='100%'
 					/>
 				</Grid>
 			</Grid>
