@@ -5,13 +5,13 @@ import {useTheme} from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
-import personal from '../assets/illustrations/personal.svg';
+import code_review from '../assets/illustrations/code_review.svg';
 
 function AboutBlock() {
 	const theme = useTheme();
 
 	return (
-		<Grid container direction='column' sx={{backgroundColor: theme.palette.grey[600]}}>
+		<Grid container direction='column' sx={{backgroundColor: theme.palette.grey[300]}}>
 			<Grid item sx={{my: 3}}>
 				<Typography component='h2' variant='h3' align='center'>
 					Sobre mim
@@ -34,7 +34,7 @@ function AboutBlock() {
 				</Grid>
 				<Grid item sx={{width: '40%'}} >
 					<img
-						src={personal}
+						src={code_review}
 						alt='illustration of person with boxes of information'
 						width='100%'
 					/>
