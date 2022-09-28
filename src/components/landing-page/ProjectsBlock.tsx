@@ -21,10 +21,11 @@ function ProjectsBlock() {
 			sx={{
 				backgroundColor: theme.palette.primary.dark,
 				padding: '5em',
+				color: 'white',
 			}}
 		>
 			<Grid item>
-				<Typography component='h2' variant='h3' align='center'>
+				<Typography component='h2' variant='h3'>
 					Projetos
 				</Typography>
 			</Grid>

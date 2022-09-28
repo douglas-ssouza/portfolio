@@ -27,12 +27,13 @@ function AboutBlock() {
 				item
 				container
 				direction={matchesMedium ? 'column' : 'row'}
-				alignItems='center'
+				justifyContent='space-between'
+				alignItems={matchesMedium ? 'center' : 'flex-start'}
 			>
 				<Grid
 					item
 					textAlign={matchesMedium ? 'center' : 'left'}
-					sx={{width: matchesMedium ? '50em' : '30em', mb: '3em'}}
+					sx={{width: matchesMedium ? '50em' : '45%', mb: '3em'}}
 				>
 					<Typography component='p' variant='body1' sx={{lineHeight: '2em'}}>
 						Me chamo Douglas Souza. Moro em Santa Isabel - SP.
@@ -47,7 +48,7 @@ function AboutBlock() {
 						Hoje atuo como desenvolvedor front-end utilizando tecnologias como ReactJS, TypeScript e Material UI.
 					</Typography>
 				</Grid>
-				<Grid item sx={{width: matchesMedium ? '40em' : '35em'}}>
+				<Grid item sx={{width: matchesMedium ? '40em' : '45%'}}>
 					<img
 						src={code_review}
 						alt='illustration of person with boxes of information'
