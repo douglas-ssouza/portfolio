@@ -2,6 +2,7 @@ import React from 'react';
 
 import {useTheme} from '@mui/material/styles';
 
+import useMediaQuery from '@mui/material/useMediaQuery';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
@@ -9,6 +10,7 @@ import code_review from '../../assets/illustrations/code_review.svg';
 
 function AboutBlock() {
 	const theme = useTheme();
+	const matchesMedium = useMediaQuery(theme.breakpoints.down('lg'));
 
 	return (
 		<Grid
@@ -17,17 +19,21 @@ function AboutBlock() {
 			sx={{backgroundColor: theme.palette.grey[300], padding: '5em'}}
 		>
 			<Grid item sx={{mb: '3em'}}>
-				<Typography component='h2' variant='h3'>
+				<Typography component='h2' variant='h3' textAlign={matchesMedium ? 'center' : 'left'}>
 					Sobre mim
 				</Typography>
 			</Grid>
 			<Grid
 				item
 				container
-				justifyContent='space-around'
-				sx={{mb: '3em'}}
+				direction={matchesMedium ? 'column' : 'row'}
+				alignItems='center'
 			>
-				<Grid item xs={12} md={6}>
+				<Grid
+					item
+					textAlign={matchesMedium ? 'center' : 'left'}
+					sx={{width: matchesMedium ? '50em' : '30em', mb: '3em'}}
+				>
 					<Typography component='p' variant='body1' sx={{lineHeight: '2em'}}>
 						Me chamo Douglas Souza. Moro em Santa Isabel - SP.
 						<br />
@@ -41,7 +47,7 @@ function AboutBlock() {
 						Hoje atuo como desenvolvedor front-end utilizando tecnologias como ReactJS, TypeScript e Material UI.
 					</Typography>
 				</Grid>
-				<Grid item xs={12} md={6}>
+				<Grid item sx={{width: matchesMedium ? '40em' : '35em'}}>
 					<img
 						src={code_review}
 						alt='illustration of person with boxes of information'

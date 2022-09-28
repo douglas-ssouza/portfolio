@@ -32,12 +32,12 @@ function ProjectPreview({name, image}: Props) {
 					</Grid>
 					<Grid item container justifyContent='space-evenly'>
 						<Grid item>
-							<Button variant='contained'>
+							<Button variant='contained' color='secondary'>
 								Detalhes
 							</Button>
 						</Grid>
 						<Grid item>
-							<Button variant='contained'>
+							<Button variant='contained' color='secondary'>
 								Repositório
 							</Button>
 						</Grid>
