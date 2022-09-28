@@ -9,7 +9,7 @@ import Carousel from 'react-material-ui-carousel';
 
 import ProjectPreview from './ProjectPreview';
 
-import trybetunes from '../../assets/projects/trybetunes.png';
+import projects from '../../data/projects';
 
 function ProjectsBlock() {
 	const theme = useTheme();
@@ -31,7 +31,11 @@ function ProjectsBlock() {
 			</Grid>
 			<Grid item>
 				<Carousel sx={{height: '30em', mt: 3}}>
-					<ProjectPreview name='Trybetunes' image={trybetunes} />
+					{
+						projects.map(project => (
+							<ProjectPreview key={project.name} project={project} />
+						))
+					}
 				</Carousel>
 			</Grid>
 		</Grid>
