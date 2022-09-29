@@ -50,10 +50,11 @@ function ProjectPreview({project}: Props) {
 				<Grid
 					item
 					container
-					direction='column'
+					direction={matchesMedium ? 'row' : 'column'}
 					sx={{width: matchesMedium ? '100%' : '30%'}}
+					justifyContent={matchesMedium ? 'space-between' : 'flex-start'}
 				>
-					<Grid item sx={{mb: '2em'}}>
+					<Grid item sx={{mb: '2em', width: matchesMedium ? '70%' : '100%'}}>
 						<Typography
 							component='p'
 							variant='body1'
@@ -71,7 +72,13 @@ function ProjectPreview({project}: Props) {
 							{project.secondParagraph}
 						</Typography>
 					</Grid>
-					<Grid item container justifyContent='space-evenly'>
+					<Grid
+						item
+						container
+						justifyContent='space-evenly'
+						direction={matchesMedium ? 'column' : 'row'}
+						sx={{width: matchesMedium ? '20%' : '100%'}}
+					>
 						<Grid item>
 							<CustomButton variant='contained' sx={{width: '7.5em'}}>
 								Projeto
