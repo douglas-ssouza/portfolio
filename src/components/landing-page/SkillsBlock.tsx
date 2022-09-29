@@ -1,54 +1,44 @@
 import React from 'react';
 
+import {useTheme} from '@mui/material/styles';
+
+import useMediaQuery from '@mui/material/useMediaQuery';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
+import techs from '../../data/techs';
+
 import thinking from '../../assets/illustrations/thinking.svg';
-import css3 from '../../assets/techs/css3.png';
-import html5 from '../../assets/techs/html5.png';
-import javascript from '../../assets/techs/javascript.png';
-import jest from '../../assets/techs/jest.png';
-import mongodb from '../../assets/techs/mongodb.png';
-import mysql from '../../assets/techs/mysql.png';
-import nodejs from '../../assets/techs/nodejs.png';
-import redux from '../../assets/techs/redux.png';
-import typescript from '../../assets/techs/typescript.png';
-import react from '../../assets/techs/react.png';
 
 function SkillsBlock() {
-	const techs = [
-		{image: html5, name: 'HTML5'},
-		{image: css3, name: 'CSS3'},
-		{image: javascript, name: 'JavaScript'},
-		{image: react, name: 'React'},
-		{image: redux, name: 'Redux'},
-		{image: typescript, name: 'TypeScript'},
-		{image: jest, name: 'Jest'},
-		{image: nodejs, name: 'NodeJs'},
-		{image: mongodb, name: 'MongoDB'},
-		{image: mysql, name: 'MySQL'},
-	];
+	const theme = useTheme();
+	const matchesMedium = useMediaQuery(theme.breakpoints.down('lg'));
 
 	return (
-		<Grid container direction='column'>
-			<Grid item sx={{my: 3}}>
-				<Typography component='h2' variant='h3' align='center'>
+		<Grid
+			container
+			direction='column'
+			sx={{backgroundColor: theme.palette.grey[300], padding: '5em'}}
+		>
+			<Grid item sx={{mb: '3em'}}>
+				<Typography component='h2' variant='h3' align={matchesMedium ? 'center' : 'left'}>
 					Habilidades
 				</Typography>
 			</Grid>
-			<Grid item container>
-				<Grid item xs={12} md={6}>
+			<Grid item container justifyContent='space-between' alignItems='center'>
+				<Grid item sx={{width: '50%'}}>
 					<img
 						src={thinking}
 						alt='illustration of person sitting next to a computer'
-						width='600em'
+						width='100%'
 					/>
 				</Grid>
-				<Grid item container xs={12} md={6} spacing={4}>
+				<Grid item container sx={{width: '45%'}} spacing={2} justifyContent='center'>
 					{
 						techs.map(({image, name}) => (
-							<Grid item key={name}>
-								<img src={image} alt={name} width='100em' />
+							<Grid item key={name} xs={3} textAlign='center'>
+								<img src={image} alt={name} width='80em' />
+								<Typography component='p' variant='caption'>{name}</Typography>
 							</Grid>
 						))
 					}
