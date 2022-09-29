@@ -10,16 +10,16 @@ import SkillsBlock from '../components/landing-page/SkillsBlock';
 function Home() {
 	return (
 		<Grid container direction='column'>
-			<Grid item>
+			<Grid item id='home'>
 				<GreetingBlock />
 			</Grid>
-			<Grid item>
+			<Grid item id='about'>
 				<AboutBlock />
 			</Grid>
-			<Grid item>
+			<Grid item id='projects'>
 				<ProjectsBlock />
 			</Grid>
-			<Grid item>
+			<Grid item id='skills'>
 				<SkillsBlock />
 			</Grid>
 		</Grid>

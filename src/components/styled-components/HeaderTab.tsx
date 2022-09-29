@@ -5,8 +5,8 @@ import type {TabProps} from '@mui/material/Tab';
 import type {Link} from 'react-router-dom';
 
 type HeaderTabProps = TabProps & {
-	component: typeof Link;
-	to: string;
+	component: string;
+	href: string;
 	selected: boolean;
 };
 

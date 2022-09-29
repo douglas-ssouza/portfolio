@@ -66,36 +66,36 @@ function Header() {
 						TabIndicatorProps={{style: {display: 'none'}}}
 					>
 						<HeaderTab
-							component={Link}
-							to='/'
+							component={'a'}
+							href='#home'
 							disableRipple
 							label='Home'
 							selected={value === 0}
 						/>
 						<HeaderTab
-							component={Link}
-							to='/about'
+							component={'a'}
+							href='#about'
 							disableRipple
 							label='Sobre mim'
 							selected={value === 1}
 						/>
 						<HeaderTab
-							component={Link}
-							to='/projects'
+							component={'a'}
+							href='#projects'
 							disableRipple
 							label='Projetos'
 							selected={value === 2}
 						/>
 						<HeaderTab
-							component={Link}
-							to='/skills'
+							component={'a'}
+							href='#skills'
 							disableRipple
 							label='Habilidades'
 							selected={value === 3}
 						/>
 						<HeaderTab
-							component={Link}
-							to='/contact'
+							component={'a'}
+							href='#contact'
 							disableRipple
 							label='Contato'
 							selected={value === 4}
