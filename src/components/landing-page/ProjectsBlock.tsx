@@ -2,6 +2,7 @@ import React from 'react';
 
 import {useTheme} from '@mui/material/styles';
 
+import useMediaQuery from '@mui/material/useMediaQuery';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
@@ -13,6 +14,7 @@ import projects from '../../data/projects';
 
 function ProjectsBlock() {
 	const theme = useTheme();
+	const matchesMedium = useMediaQuery(theme.breakpoints.down('lg'));
 
 	return (
 		<Grid
@@ -25,12 +27,22 @@ function ProjectsBlock() {
 			}}
 		>
 			<Grid item>
-				<Typography component='h2' variant='h3'>
+				<Typography
+					component='h2'
+					variant='h3'
+					align={matchesMedium ? 'center' : 'left'}
+				>
 					Projetos
 				</Typography>
 			</Grid>
 			<Grid item>
-				<Carousel sx={{height: '30em', mt: 3}}>
+				<Carousel
+					interval={5000}
+					animation='slide'
+					duration={1000}
+					fullHeightHover
+					sx={{mt: 3}}
+				>
 					{
 						projects.map(project => (
 							<ProjectPreview key={project.name} project={project} />
