@@ -26,7 +26,7 @@ function ProjectsBlock() {
 				color: 'white',
 			}}
 		>
-			<Grid item>
+			<Grid item sx={{mb: '3em'}}>
 				<Typography
 					component='h2'
 					variant='h3'
@@ -41,7 +41,6 @@ function ProjectsBlock() {
 					animation='slide'
 					duration={1000}
 					fullHeightHover
-					sx={{mt: 3}}
 				>
 					{
 						projects.map(project => (
