@@ -9,6 +9,10 @@ const typography = {
 		color: 'white',
 		fontWeight: 300,
 	},
+	body2: {
+		color: 'white',
+		fontWeight: 200,
+	},
 };
 
 export default typography;

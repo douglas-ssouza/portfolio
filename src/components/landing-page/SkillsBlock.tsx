@@ -25,18 +25,30 @@ function SkillsBlock() {
 					Habilidades
 				</Typography>
 			</Grid>
-			<Grid item container justifyContent='space-between' alignItems='center'>
-				<Grid item sx={{width: '50%'}}>
+			<Grid
+				item
+				container
+				justifyContent='space-between'
+				alignItems='center'
+				direction={matchesMedium ? 'column' : 'row'}
+			>
+				<Grid item sx={{mb: '3em', width: matchesMedium ? '100%' : '45%'}}>
 					<img
 						src={thinking}
 						alt='illustration of person sitting next to a computer'
 						width='100%'
 					/>
 				</Grid>
-				<Grid item container sx={{width: '45%'}} spacing={2} justifyContent='center'>
+				<Grid
+					item
+					container
+					sx={{width: matchesMedium ? '100%' : '45%'}}
+					justifyContent='center'
+					spacing={2}
+				>
 					{
 						techs.map(({image, name}) => (
-							<Grid item key={name} xs={3} textAlign='center'>
+							<Grid item key={name} xs={4} md={3} textAlign='center'>
 								<img src={image} alt={name} width='80em' />
 								<Typography component='p' variant='caption'>{name}</Typography>
 							</Grid>
