@@ -2,6 +2,7 @@ import React from 'react';
 
 import {useTheme} from '@mui/material/styles';
 
+import useMediaQuery from '@mui/material/useMediaQuery';
 import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
@@ -11,6 +12,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 function Footer() {
 	const theme = useTheme();
+	const hidden = useMediaQuery(theme.breakpoints.down('md'));
 
 	return (
 		<Grid
@@ -18,7 +20,7 @@ function Footer() {
 			alignItems='center'
 			justifyContent='space-between'
 			sx={{
-				padding: '0.8em',
+				padding: '0.35em',
 				backgroundColor: theme.palette.primary.main,
 			}}
 		>
@@ -30,7 +32,7 @@ function Footer() {
 					target='_blank'
 					sx={{mr: '0.6em'}}
 				>
-					<LinkedInIcon sx={{fontSize: '2em'}} />
+					<LinkedInIcon sx={{fontSize: '2em', verticalAlign: 'text-bottom'}} />
 				</IconButton>
 				<IconButton
 					color='secondary'

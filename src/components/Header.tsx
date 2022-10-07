@@ -95,9 +95,9 @@ function Header() {
 						/>
 						<HeaderTab
 							component={'a'}
-							href='#contact'
+							href='#social'
 							disableRipple
-							label='Contato'
+							label='Redes Sociais'
 							selected={value === 4}
 						/>
 					</Tabs>
